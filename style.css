@@ -1,0 +1,165 @@
+/* Apply styles to body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.4), rgba(135, 206, 250, 0.4));
+}
+
+/* Phone frame styles */
+.phone-frame {
+    width: 375px; /* Set the width of the phone frame */
+    height: 667px; /* Set the height of the phone frame */
+    border-radius: 40px;
+    margin: 50px auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background: #f3f3f3; /* Fallback for unsupported browsers */
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.4), rgba(135, 206, 250, 0.4));
+}
+
+/* Mobile wrapper styles */
+.mobile-wrapper {
+    position: relative;
+    width: 100%; /* Set the width of the mobile screen */
+    height: calc(100% - 44px); /* Set the height of the mobile screen */
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Mobile screen styles */
+.mobile-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 18px; /* Decrease the font size */
+    color: #333;
+    margin-top: 10px; /* Adjust the margin top */
+    margin-bottom: 5px; /* Adjust the margin bottom */
+}
+
+/* Animated button styles */
+.animated-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: scale(1.05);
+}
+
+.animated-button:active {
+    transform: scale(0.95);
+}
+
+/* Chat container styles */
+.chat-container {
+    max-height: 400px; /* Adjust the maximum height as needed */
+}
+
+
+/* Message styles */
+.message {
+    display: inline-block;
+    max-width: 60%; /* Decrease the maximum width */
+    margin: 5px; /* Decrease the margin */
+    padding: 7px 12px; /* Decrease the padding */
+    border-radius: 15px; /* Decrease the border radius */
+    clear: both;
+}
+
+/* Message from me styles */
+.from-me {
+    background-color: #007bff;
+    color: white;
+    float: right;
+}
+
+/* Message from Jake styles */
+.from-jake {
+    background-color: #f3f3f3;
+    color: #333;
+    float: left;
+}
+
+/* Typing animation styles */
+@keyframes typingAnimation {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+    100% { content: '.'; }
+}
+
+#typing-animation:after {
+    display: inline-block;
+    content: '';
+    animation: typingAnimation 1.5s infinite;
+}
+
+/* Response button container styles */
+.response-buttons {
+    margin-top: 20px;
+}
+
+/* Yes button styles */
+#yes-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; /* Add space between buttons */
+}
+
+#yes-btn:hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: scale(1.05);
+}
+
+#yes-btn:active {
+    transform: scale(0.95);
+}
+
+/* No button styles */
+#no-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff6b6b; /* Red */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#no-btn:hover {
+    background-color: #b53e3e; /* Darker Red */
+}
+
+#no-btn:active {
+    background-color: #8c3030; /* Even darker Red */
+}
